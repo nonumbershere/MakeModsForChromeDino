@@ -92,6 +92,16 @@ if (addType == 'prepend') {
     addWhere.prepend(menu);
 }
 },
+addMenuWithHTML: function(html, background, height, width, color, id, addWhere){
+      var r = document.createElement('div');
+r.innerHTML=html;
+r.id=id;
+r.style.width=width;
+r.style.height=height;
+r.style.color=color;
+r.style.background=background;
+addWhere.prepend(r);
+},
 addTextLabel: function(text, background, id, color, addType, addWhere){
 var p = document.createElement('p');
  if (addType == 'insertBefore') {
